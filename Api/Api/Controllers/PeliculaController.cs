@@ -1,83 +1,39 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace Api.Controllers
 {
-    public class PeliculaController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class PeliculaController : ControllerBase
     {
-        // GET: PeliculaController
-        public ActionResult Index()
+        IList<Pelicula> Lista = new List<Pelicula>();
+
+        public PeliculaController()
         {
-            return View();
+            this.Lista.Add(new Pelicula() { Id = 1, Genero = "Anime", Nombre = "Naruto",  FechaPublicacion = "0291029", Director = "el señor de las sopaipillas",Duracion = 150 });
+            this.Lista.Add(new Pelicula() { Id = 2, Genero = "Anime", Nombre = "Kung fu Panda", FechaPublicacion = "0291029", Director = "Jack Black", Duracion = 500 });
+            this.Lista.Add(new Pelicula() { Id = 3, Genero = "Anime", Nombre = "Naruto", FechaPublicacion = "0291029", Director = "el señor de las sopaipillas", Duracion = 500 });
+            this.Lista.Add(new Pelicula() { Id = 4, Genero = "Anime", Nombre = "Naruto", FechaPublicacion = "0291029", Director = "el señor de las sopaipillas", Duracion = 500 });
+            this.Lista.Add(new Pelicula() { Id = 5, Genero = "Anime", Nombre = "Naruto", FechaPublicacion = "0291029", Director = "el señor de las sopaipillas", Duracion = 500 });
+            this.Lista.Add(new Pelicula() { Id = 6, Genero = "Anime", Nombre = "Naruto", FechaPublicacion = "0291029", Director = "el señor de las sopaipillas", Duracion = 500 });
+            this.Lista.Add(new Pelicula() { Id = 7, Genero = "Anime", Nombre = "Naruto", FechaPublicacion = "0291029", Director = "el señor de las sopaipillas", Duracion = 500 });
+            this.Lista.Add(new Pelicula() { Id = 8, Genero = "Anime", Nombre = "Naruto", FechaPublicacion = "0291029", Director = "el señor de las sopaipillas", Duracion = 500 });
+            this.Lista.Add(new Pelicula() { Id = 9, Genero = "Anime", Nombre = "Naruto", FechaPublicacion = "0291029", Director = "el señor de las sopaipillas", Duracion = 500 });
+            this.Lista.Add(new Pelicula() { Id = 10, Genero = "Anime", Nombre = "Naruto", FechaPublicacion = "0291029", Director = "el señor de las sopaipillas", Duracion = 500 });
+            this.Lista.Add(new Pelicula() { Id = 11, Genero = "Anime", Nombre = "Naruto", FechaPublicacion = "0291029", Director = "el señor de las sopaipillas", Duracion = 500 });
+            this.Lista.Add(new Pelicula() { Id = 12, Genero = "Anime", Nombre = "Naruto", FechaPublicacion = "0291029", Director = "el señor de las sopaipillas", Duracion = 500 });
+            this.Lista.Add(new Pelicula() { Id = 13, Genero = "Anime", Nombre = "Naruto", FechaPublicacion = "0291029", Director = "el señor de las sopaipillas", Duracion = 500 });
+            this.Lista.Add(new Pelicula() { Id = 14, Genero = "Anime", Nombre = "Naruto", FechaPublicacion = "0291029", Director = "el señor de las sopaipillas", Duracion = 500 });
+
         }
 
-        // GET: PeliculaController/Details/5
-        public ActionResult Details(int id)
+        [HttpGet]
+        public IList<Pelicula> getDatos()
         {
-            return View();
-        }
+            return Lista;
 
-        // GET: PeliculaController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: PeliculaController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: PeliculaController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: PeliculaController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: PeliculaController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: PeliculaController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
         }
     }
 }

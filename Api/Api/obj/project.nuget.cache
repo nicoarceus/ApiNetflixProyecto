@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B0ZxhmKXdjLtGzXvz+XKTJqhDUDdi1SHmlNhJndje4qnqksa07mUC0txk8m0qHAvWjeOVjMYEtcHEdMguF0eyQ==",
+  "dgSpecHash": "IkxMSJ01uVpHDXjhw+cKrBMIu6EhrX+YOX/oyfLlBQMqW6JVWPnRn5yNC/QuDmJQnIGHwZsyIeA/2Gq7GbwkaQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ignis\\source\\repos\\Api\\Api\\Api.csproj",
+  "projectFilePath": "C:\\Users\\Ignis\\source\\repos\\ApiNetflixProyecto\\Api\\Api\\Api.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

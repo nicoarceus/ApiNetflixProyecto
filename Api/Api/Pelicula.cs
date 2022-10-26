@@ -7,6 +7,6 @@
         public string Genero { get; set; }
         public string FechaPublicacion { get; set; }
         public string Director { get; set; }
-        public string Duracion { get; set; }
+        public int Duracion { get; set; }
     }
 }
